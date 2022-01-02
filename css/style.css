@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Chakra Petch, sans-serif;
+}
+
+:root {
+  --title-font: Titillium Web, sans-serif;
+  --color-primary: #16e0bd;
+  --color-secondary: #303030;
+  --default: #ffffff;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+
+  position: relative;
+  left: 85%;
+  top: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.pre-intro::after {
+  content: "\a";
+  white-space: pre;
+}
+
+.intro {
+  text-align: center;
+}
+
+.role {
+  background-color: var(--color-primary);
+  padding: 20px;
+  margin: 0 20px 20px 20px;
+}
+
+img {
+  width: 80%;
+  height: 90%;
+  box-shadow: 20px 20px 90px 2px var(--color-secondary);
+  margin-bottom: 50px;
+}
+
+.work > h2 {
+  color: var(--color-primary);
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 60px;
+  padding: 20px;
+}
+
+hr {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.work {
+  background-color: var(--color-secondary);
+  color: var(--default);
+}
+
+.work > h3,
+.work > p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.checkout {
+  background-color: var(--color-primary);
+  color: black;
+  padding: 20px;
+  margin: 0 50px;
+  font-weight: bolder;
+  font-size: 17px;
+}
