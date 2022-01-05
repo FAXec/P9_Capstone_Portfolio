@@ -74,8 +74,25 @@ ul li {
   margin-bottom: 50px;
 }
 
-.about-me > h2 {
+.about-me,
+.projects {
+  background-color: var(--color-secondary);
+  color: var(--default);
+  min-height: 25rem;
+}
+
+.about-me h2,
+.projects h2 {
   color: var(--color-primary);
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 60px;
+  padding: 20px;
+}
+
+.skills h2,
+.experience h2,
+.education h2 {
   font-family: var(--title-font);
   text-align: center;
   font-size: 60px;
@@ -87,24 +104,10 @@ hr {
   margin: 20px auto;
 }
 
-.about-me {
-  background-color: var(--color-secondary);
-  color: var(--default);
-}
-
-/* .about-me:before {
-  content: "";
-  background-color: var(--color-secondary);
-  position: absolute;
-  height: 60%;
-  width: 4000px;
-  z-index: -1;
-} */
-
-.about-me > h3,
-.about-me > p {
+.about-me h3,
+.about-me p {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .checkout {
@@ -116,9 +119,16 @@ hr {
   font-size: 17px;
 }
 
-.skills > h2 {
-  font-family: var(--title-font);
-  text-align: center;
-  font-size: 60px;
-  padding: 20px;
+.bootstrap-svg {
+  position: relative;
+  left: 20%;
+}
+
+.js-svg {
+  position: relative;
+  left: 10%;
+}
+
+.projects h3 {
+  margin-left: 10px;
 }
