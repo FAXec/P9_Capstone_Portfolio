@@ -2,11 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Chakra Petch, sans-serif;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 :root {
-  --title-font: Titillium Web, sans-serif;
+  --title-font: "Titillium Web", sans-serif;
   --color-primary: #16e0bd;
   --color-secondary: #303030;
   --default: #ffffff;
@@ -67,14 +67,14 @@ ul li {
   margin: 0 20px 20px 20px;
 }
 
-img {
+.intro img {
   width: 80%;
   height: 90%;
   box-shadow: 20px 20px 90px 2px var(--color-secondary);
   margin-bottom: 50px;
 }
 
-.work > h2 {
+.about-me > h2 {
   color: var(--color-primary);
   font-family: var(--title-font);
   text-align: center;
@@ -87,13 +87,22 @@ hr {
   margin: 20px auto;
 }
 
-.work {
+.about-me {
   background-color: var(--color-secondary);
   color: var(--default);
 }
 
-.work > h3,
-.work > p {
+/* .about-me:before {
+  content: "";
+  background-color: var(--color-secondary);
+  position: absolute;
+  height: 60%;
+  width: 4000px;
+  z-index: -1;
+} */
+
+.about-me > h3,
+.about-me > p {
   text-align: center;
   margin-bottom: 10px;
 }
@@ -105,4 +114,11 @@ hr {
   margin: 0 50px;
   font-weight: bolder;
   font-size: 17px;
+}
+
+.skills > h2 {
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 60px;
+  padding: 20px;
 }
