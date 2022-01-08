@@ -11,7 +11,7 @@
   --color-secondary: #303030;
   --color-tertiary: #e0860b;
   --color-complimentary: #fc5817;
-
+  --color-darkblack: #141414;
   --default: #ffffff;
 }
 a {
@@ -80,6 +80,13 @@ ul li {
   margin-bottom: 50px;
 }
 
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-me,
 .projects {
   background-color: var(--color-secondary);
@@ -120,15 +127,6 @@ hr {
   margin-bottom: 30px;
 }
 
-.checkout {
-  background-color: var(--color-primary);
-  color: black;
-  padding: 20px;
-  margin: 0 50px;
-  font-weight: bolder;
-  font-size: 17px;
-}
-
 .bootstrap-svg {
   position: relative;
   left: 20%;
@@ -143,11 +141,24 @@ hr {
   margin-left: 10px;
 }
 
+.skills img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.skills img:hover {
+  transform: scale(1.1);
+}
+
 .project-subsection img {
   width: 80%;
   height: 50%;
   margin: 10px;
   border: 2px solid var(--color-complimentary);
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-subsection img:hover {
+  transform: scale(1.05);
 }
 
 .project-subsection {
@@ -163,7 +174,8 @@ hr {
     -0.2em 0 0.2em var(--color-primary);
   padding: 5px;
   margin: 20px 20px 0;
-  background-color: var(--default);
+
+  background: linear-gradient(var(--color-primary), var(--default));
   color: var(--color-secondary);
 
   transition: transform 0.2s ease-in-out;
@@ -171,21 +183,52 @@ hr {
 
 .project-subsection:hover {
   transform: scale(1.03);
-  background-color: var(--color-primary);
+  background: linear-gradient(var(--default), var(--color-primary));
 }
 
-.project-subsection button {
+.project-subsection button,
+.about-me button {
   border-radius: 5px;
   padding: 10px;
   width: 50%;
   margin-bottom: 20px;
-  background-color: var(--color-primary);
   box-shadow: 3px 3px var(--color-complimentary),
     -0.1em -0.1em 0.4em var(--color-complimentary);
+  background: linear-gradient(var(--default), var(--color-primary));
 }
 
 button:hover {
+  background: linear-gradient(var(--color-primary), var(--default));
   box-shadow: 0 5px 15px var(--color-complimentary);
-  background-color: var(--color-tertiary);
   transition: 0.4s ease-in-out;
+}
+
+footer {
+  background-color: var(--color-darkblack);
+  color: var(--default);
+}
+
+.contact-info,
+.follow-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+  margin-top: 20px;
+}
+
+.follow-me-svg img {
+  margin-right: 20px;
+}
+
+.contact h2 {
+  color: var(--color-primary);
+}
+
+.email a,
+.phone a {
+  color: var(--color-complimentary);
+  text-shadow: 0 0 7px var(--color-complimentary),
+    0 0 10px var(--color-complimentary), 0 0 21px var(--color-complimentary);
 }
