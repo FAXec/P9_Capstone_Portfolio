@@ -9,6 +9,9 @@
   --title-font: "Titillium Web", sans-serif;
   --color-primary: #16e0bd;
   --color-secondary: #303030;
+  --color-tertiary: #e0860b;
+  --color-complimentary: #fc5817;
+
   --default: #ffffff;
 }
 a {
@@ -84,6 +87,10 @@ ul li {
   min-height: 25rem;
 }
 
+/* .projects {
+  min-height: 30rem;
+} */
+
 .about-me h2,
 .projects h2 {
   color: var(--color-primary);
@@ -140,6 +147,7 @@ hr {
   width: 80%;
   height: 50%;
   margin: 10px;
+  border: 2px solid var(--color-complimentary);
 }
 
 .project-subsection {
@@ -148,27 +156,36 @@ hr {
   justify-content: center;
   align-items: center;
   row-gap: 20px;
-  transition: all 0.2s ease-in-out;
-}
 
-.project-subsection {
   border: 1px solid var(--color-primary);
   border-radius: 10px;
+  box-shadow: 3px 3px var(--color-complimentary),
+    -0.2em 0 0.2em var(--color-primary);
   padding: 5px;
-  margin-top: 20px;
+  margin: 20px 20px 0;
+  background-color: var(--default);
+  color: var(--color-secondary);
+
+  transition: transform 0.2s ease-in-out;
 }
 
 .project-subsection:hover {
-  transform: scale(1.5);
+  transform: scale(1.03);
   background-color: var(--color-primary);
 }
 
 .project-subsection button {
   border-radius: 5px;
   padding: 10px;
+  width: 50%;
+  margin-bottom: 20px;
+  background-color: var(--color-primary);
+  box-shadow: 3px 3px var(--color-complimentary),
+    -0.1em -0.1em 0.4em var(--color-complimentary);
 }
 
 button:hover {
-  background-color: var(--color-primary);
+  box-shadow: 0 5px 15px var(--color-complimentary);
+  background-color: var(--color-tertiary);
   transition: 0.4s ease-in-out;
 }
