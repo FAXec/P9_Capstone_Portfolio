@@ -11,6 +11,9 @@
   --color-secondary: #303030;
   --default: #ffffff;
 }
+a {
+  text-decoration: none;
+}
 
 ul li {
   list-style: none;
@@ -131,4 +134,41 @@ hr {
 
 .projects h3 {
   margin-left: 10px;
+}
+
+.project-subsection img {
+  width: 80%;
+  height: 50%;
+  margin: 10px;
+}
+
+.project-subsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-subsection {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.project-subsection:hover {
+  transform: scale(1.5);
+  background-color: var(--color-primary);
+}
+
+.project-subsection button {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button:hover {
+  background-color: var(--color-primary);
+  transition: 0.4s ease-in-out;
 }
