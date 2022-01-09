@@ -30,7 +30,7 @@ ul li {
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: var(--color-secondary); /* Black*/
+  background-color: var(--color-secondary);
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -71,6 +71,8 @@ ul li {
     -0.1em -0.1em 0.4em var(--color-complimentary);
   background: linear-gradient(var(--default), var(--color-primary));
   color: var(--color-secondary);
+
+  position: fixed;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -166,46 +168,12 @@ hr {
   transform: scale(1.1);
 }
 
-.project-subsection img {
-  width: 80%;
-  height: 50%;
-  margin: 10px;
-  border: 2px solid var(--color-complimentary);
-  transition: transform 0.2s ease-in-out;
-}
-
-.project-subsection img:hover {
-  transform: scale(1.05);
-}
-
-.project-subsection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 20px;
-
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  box-shadow: 3px 3px var(--color-complimentary),
-    -0.2em 0 0.2em var(--color-primary);
-  padding: 5px;
-  margin: 20px 20px 0;
-
-  background: linear-gradient(var(--color-primary), var(--default));
-  color: var(--color-secondary);
-
-  transition: transform 0.2s ease-in-out;
-}
-
-.project-subsection:hover,
 .work-experience:hover,
 .studies:hover {
   transform: scale(1.03);
   background: linear-gradient(var(--default), var(--color-primary));
 }
 
-.project-subsection button,
 .about-me button {
   border-radius: 5px;
   padding: 10px;
