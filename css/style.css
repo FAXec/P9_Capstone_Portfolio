@@ -22,45 +22,61 @@ ul li {
   list-style: none;
 }
 
-.container {
-  display: inline-block;
+/* The sidebar menu | Ref: https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: var(--color-secondary); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--default);
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: var(--color-primary);
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
   cursor: pointer;
+  padding: 10px 15px;
+  border: none;
 
-  position: relative;
-  left: 85%;
-  top: 10px;
+  box-shadow: 3px 3px var(--color-complimentary),
+    -0.1em -0.1em 0.4em var(--color-complimentary);
+  background: linear-gradient(var(--default), var(--color-primary));
+  color: var(--color-secondary);
 }
 
-.bar1,
-.bar2,
-.bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-/* Fade out the second bar */
-.change .bar2 {
-  opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
-}
-
-.pre-intro::after {
-  content: "\a";
-  white-space: pre;
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 20px;
 }
 
 .intro {
@@ -88,7 +104,8 @@ ul li {
 }
 
 .about-me,
-.projects {
+.projects,
+.education {
   background-color: var(--color-secondary);
   color: var(--default);
   min-height: 25rem;
@@ -181,7 +198,9 @@ hr {
   transition: transform 0.2s ease-in-out;
 }
 
-.project-subsection:hover {
+.project-subsection:hover,
+.work-experience:hover,
+.studies:hover {
   transform: scale(1.03);
   background: linear-gradient(var(--default), var(--color-primary));
 }
@@ -201,6 +220,31 @@ button:hover {
   background: linear-gradient(var(--color-primary), var(--default));
   box-shadow: 0 5px 15px var(--color-complimentary);
   transition: 0.4s ease-in-out;
+}
+
+.work-experience,
+.studies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+
+  border: 1px solid var(--color-primary);
+  box-shadow: 3px 3px var(--color-complimentary),
+    -0.2em 0 0.2em var(--color-primary);
+
+  margin: 20px 20px 0;
+  text-align: center;
+
+  background: linear-gradient(var(--color-primary), var(--default));
+  color: var(--color-secondary);
+
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience {
+  margin-bottom: 30px;
 }
 
 footer {
@@ -224,11 +268,13 @@ footer {
 
 .contact h2 {
   color: var(--color-primary);
+  text-shadow: 0 0 7px var(--color-primary), 0 0 10px var(--color-primary),
+    0 0 21px var(--color-primary);
 }
 
 .email a,
 .phone a {
-  color: var(--color-complimentary);
+  color: var(--default);
   text-shadow: 0 0 7px var(--color-complimentary),
     0 0 10px var(--color-complimentary), 0 0 21px var(--color-complimentary);
 }

@@ -10,32 +10,34 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
 
     <title>Fahim Xec Portfolio Website</title>
+
+    
 </head>
 <body>
 <header>
 
-    
 
-    <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education"> Education </a></li>
+        <li> <a href="#contact">Contact</a></li>
+    </ul>
       </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Open Menu</button>
+      </div>   
 
-      <nav>
-        <ul>
-            <li><a href="#about-me"> About Me</a></li>
-            <li><a href="#skills"> Skills </a></li>
-            <li><a href="#projects"> Projects </a></li>
-            <li><a href="#experience"> Experience </a></li>
-            <li><a href="#education"> Education </a></li>
-            <li> <a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
 
 <section class="intro">
         <h1><span class="pre-intro">Hi, I am </span>Fahim Xec</h1>
@@ -134,34 +136,49 @@
 <section class="experience">
     <h2 id="experience">Experience</h2>
     
-    <div class="work-experience">
-    <h3>Paid Social Specialist</h3>
-    <p>Allied Global Marketing</p>    
+    <div class="work-experience e-1">
+       <h3>Paid Social Manager</h3>
+       <p>iCrossing</p>
     </div>
-
-    <div class="work-experience">
-    <h3>Paid Social Manager</h3>
-    <p>iCrossing</p>
-    </div>
-
     
+    <div class="work-experience">
+        <h3>Paid Social Specialist</h3>
+        <p>Allied Global Marketing</p>    
+    </div>
 
+    <div class="work-experience">
+        <h3>Standards and Procedures Officer</h3>
+        <p>Emirates Airlines</p>    
+    </div>   
 </section>
 
 <section class="education">
     <h2 id="education">Education</h2>
+    
+  <div class="studies">
+    <h3>Front End Web Development Techdegree</h3>   
+    <h4>From Tree House, Portland, United States</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+ </div>
 
   <div class="studies">
-    <h3>Bachelor of Business Administration</h3>
-    <h4>University of Madras</h4>
+    <h3>Professional Diploma in Digital Marketing</h3>
+    <h4>From Digital Marketing Institute, Dublin, Ireland</h4>
     <p>Lorem ipsum dolor sit amet </p>
   </div>
 
-  <div class="studie">
-     <h3>Front End Web Development Techdegree</h3>   
-     <h4>Tree House</h4>
-     <p>Lorem ipsum dolor sit amet.</p>
+  <div class="studies">
+    <h3>The Fundamentals of Digital Marketing</h3>
+    <h4>From Google</h4>
+    <p>Lorem ipsum dolor sit amet </p>
   </div>
+
+  <div class="studies">
+    <h3>Bachelor of Business Administration</h3>
+    <h4>From University of Madras, India</h4>
+    <p>Lorem ipsum dolor sit amet </p>
+  </div>
+
 </section>
 
 </main>
