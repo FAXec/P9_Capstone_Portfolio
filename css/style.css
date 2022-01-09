@@ -202,7 +202,9 @@ button:hover {
   box-shadow: 3px 3px var(--color-complimentary),
     -0.2em 0 0.2em var(--color-primary);
 
-  margin: 20px 20px 0;
+  height: 10rem;
+  margin: 20px 10px;
+
   text-align: center;
 
   background: linear-gradient(var(--color-primary), var(--default));
@@ -245,4 +247,61 @@ footer {
   color: var(--default);
   text-shadow: 0 0 7px var(--color-complimentary),
     0 0 10px var(--color-complimentary), 0 0 21px var(--color-complimentary);
+}
+
+@media screen and (min-width: 768px) {
+  .about-me button {
+    font-size: 20px;
+    width: 15rem;
+    padding: 15px;
+  }
+
+  .dev-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .contact {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-info {
+    display: grid;
+    margin-left: 10px;
+  }
+
+  .experience {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(2, 1fr);
+  }
+  .experience h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .ek {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  .education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(2, 1fr);
+  }
+  .education h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dev-svg:first-of-type {
+    margin-left: 50px;
+  }
 }
